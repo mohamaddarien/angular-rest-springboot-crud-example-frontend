@@ -1,0 +1,39 @@
+<br>
+<div class="p-grid" style="width: 25%">
+    <div class="p-col-6">
+        <span>
+            First Name : 
+        </span>
+    </div>
+    <div class="p-col-6">
+        <span class="ui-float-label">
+            <input id="firstName" type="text" size="30" pInputText [(ngModel)]="employee.firstName"/> 
+            <label for="firstName">First Name</label>
+        </span>
+    </div>
+    <div class="p-col-6">
+        <span>
+            Last Name : 
+        </span>
+    </div>
+    <div class="p-col-6">
+        <span class="ui-float-label">
+            <input id="lastName" type="text" size="30" pInputText [(ngModel)]="employee.lastName"/> 
+            <label for="lastName">Last Name</label>
+        </span>
+    </div>
+    <div class="p-col-6">
+        <span>
+            Email : 
+        </span>
+    </div>
+    <div class="p-col-6">
+        <span class="ui-float-label">
+            <input id="email" type="text" size="30" pInputText [(ngModel)]="employee.email"/> 
+            <label for="email">Email</label>
+        </span>
+    </div>
+</div>
+<div style="text-align:left">
+        <button type="button" pButton icon="fa fa-plus" (click)="updateEmployee()" label="Update"></button>
+</div>

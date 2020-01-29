@@ -1,0 +1,27 @@
+<h3 style="text-align: center;">Employee List </h3>
+<p-table [value]="employees" [paginator]="true" [rows]=5>
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of cols">
+                {{col.header}}
+            </th>
+            <th>Action</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-employee>
+        <tr>
+            <td *ngFor="let col of cols">
+                    {{employee[col.field]}}
+            </td>
+            <td style="text-align:center">
+                <button pButton type="button" icon="pi pi-pencil" class="ui-button-info" (click)="edit(employee.id)"></button>
+                <button pButton type="button" icon="fa fa-remove" (click)="delete(employee)"></button>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary" let-rowData>
+        <div style="text-align:left">
+            <button type="button" pButton icon="fa fa-plus" (click)="create()" label="Add"></button>
+        </div>
+    </ng-template>
+</p-table>
